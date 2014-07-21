@@ -1,4 +1,6 @@
 {
   "name": "MyApp",
-  "app_id": ""
+  "email": "",
+  "app_id": "",
+  "package_name": ""
 }
