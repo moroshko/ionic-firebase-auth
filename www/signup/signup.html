@@ -1,0 +1,22 @@
+<ion-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">Sign Up</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input type="email" placeholder="me@gmail.com" ng-model="user.email">
+      </label>
+    </div>
+    <div class="padding">
+      <button class="button button-positive button-block" ng-click="signup()">Sign Up</button>
+      <div class="error" ng-if="errorMessage" ng-bind="errorMessage">
+      </div>
+      <br><br><br>
+      <button class="button button-stable button-block" ui-sref="login">
+        I have an account
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
