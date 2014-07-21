@@ -7,7 +7,7 @@ var karmaConfig = require('./karma.js');
 
 var paths = {
   sass:    ['./www/**/*.scss'],
-  scripts: ['./www/**/*.js', '!./www/lib/**/*.js', '!./www/myapp.js']
+  scripts: ['./www/**/*.js', '!./www/lib/**/*.js']
 };
 
 gulp.task('jshint', function() {
