@@ -1,3 +1,3 @@
 # view AndroidManifest.xml #generated:6
--keep class com.ionicframework.myapp880010.MyApp { <init>(...); }
+-keep class com.mycompany.myapp.MyApp { <init>(...); }
 

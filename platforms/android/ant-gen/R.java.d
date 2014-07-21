@@ -1,4 +1,4 @@
-/Users/mishamoroshko/ionic-firebase-auth/platforms/android/ant-gen/com/ionicframework/myapp880010/R.java \
+/Users/mishamoroshko/ionic-firebase-auth/platforms/android/ant-gen/com/mycompany/myapp/R.java \
  : /Users/mishamoroshko/ionic-firebase-auth/platforms/android/res/drawable/icon.png \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/res/drawable-hdpi/icon.png \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/res/drawable-land-hdpi/screen.png \
