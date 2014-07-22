@@ -24,6 +24,11 @@ angular.module('MyApp', [
       url: '/login',
       templateUrl: 'login/login.html',
       controller: 'LoginCtrl'
+    })
+    .state('reset-password', {
+      url: '/reset-password',
+      templateUrl: 'reset-password/reset-password.html',
+      controller: 'ResetPasswordCtrl'
     });
 
   $urlRouterProvider.otherwise('/login');

@@ -13,6 +13,7 @@ module.exports = {
     'user/*.js',
     'sidemenu/*.js',
     'signup/*.js',
-    'login/*.js'
+    'login/*.js',
+    'reset-password/*.js'
   ]
 };
