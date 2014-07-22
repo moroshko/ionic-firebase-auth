@@ -19,9 +19,14 @@ angular.module('MyApp', [
       url: '/signup',
       templateUrl: 'signup/signup.html',
       controller: 'SignupCtrl'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'login/login.html',
+      controller: 'LoginCtrl'
     });
 
-  $urlRouterProvider.otherwise('/signup');
+  $urlRouterProvider.otherwise('/login');
 })
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

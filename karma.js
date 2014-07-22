@@ -11,7 +11,8 @@ module.exports = {
     'app.js',
     'auth/*.js',
     'user/*.js',
+    'sidemenu/*.js',
     'signup/*.js',
-    'sidemenu/*.js'
+    'login/*.js'
   ]
 };

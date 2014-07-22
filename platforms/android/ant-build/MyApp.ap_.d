@@ -37,6 +37,7 @@
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/index.html \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/ionic.app.scss \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/lib \
+/Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/login \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/myapp.css \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/plugins \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/sidemenu \
@@ -146,6 +147,8 @@
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-icons.scss \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-variables.scss \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss \
+/Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/login/login-controller.js \
+/Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/login/login.html \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/plugins/com.ionic.keyboard \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /Users/mishamoroshko/ionic-firebase-auth/platforms/android/assets/www/plugins/com.ionic.keyboard/www \
