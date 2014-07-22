@@ -8,6 +8,12 @@ angular.module('MyApp', [
   'MyApp.controllers'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
+  var resolve = {
+    auth: function(Auth, User) {
+      return Auth.getCurrentUser().then(User.loadCurrentUser);
+    }
+  };
+  
   $stateProvider
     .state('app', {
       url: '/app',
@@ -29,6 +35,12 @@ angular.module('MyApp', [
       url: '/reset-password',
       templateUrl: 'reset-password/reset-password.html',
       controller: 'ResetPasswordCtrl'
+    })
+    .state('change-password', {
+      url: '/change-password',
+      templateUrl: 'change-password/change-password.html',
+      controller: 'ChangePasswordCtrl',
+      resolve: resolve
     });
 
   $urlRouterProvider.otherwise('/login');

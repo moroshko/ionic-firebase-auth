@@ -14,6 +14,8 @@ module.exports = {
     'sidemenu/*.js',
     'signup/*.js',
     'login/*.js',
-    'reset-password/*.js'
+    'reset-password/*.js',
+    'change-password/*.js',
+    'dashboard/*.js'
   ]
 };
