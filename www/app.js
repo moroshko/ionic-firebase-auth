@@ -13,7 +13,7 @@ angular.module('MyApp', [
       return Auth.getCurrentUser().then(User.loadCurrentUser);
     }
   };
-  
+
   $stateProvider
     .state('app', {
       url: '/app',
@@ -41,9 +41,19 @@ angular.module('MyApp', [
       templateUrl: 'change-password/change-password.html',
       controller: 'ChangePasswordCtrl',
       resolve: resolve
+    })
+    .state('app.dashboard', {
+      url: '/dashboard', 
+      views: {
+        menuContent: {
+          templateUrl: 'dashboard/dashboard.html',
+          controller: 'DashboardCtrl'//,
+          //resolve: resolve // What's wrong with this??
+        }
+      }
     });
 
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/app/dashboard');
 })
 .run(function($rootScope, $state, $ionicPlatform) {
   $ionicPlatform.ready(function() {
