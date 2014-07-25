@@ -9,8 +9,29 @@ angular.module('MyApp', [
 ])
 .config(function($stateProvider, $urlRouterProvider) {
   var resolve = {
-    auth: function(Auth, User) {
-      return Auth.getCurrentUser().then(User.loadCurrentUser);
+    auth: function($q, $timeout, Auth, User) {
+      var defer = $q.defer();
+      var state = this;
+
+      Auth.getCurrentUser().then(function() {
+        User.loadCurrentUser().then(function() {
+          if (state.name === 'change-password') {
+            defer.resolve();
+          } else {
+            if (User.hasChangedPassword()) {
+              defer.resolve();
+            } else {
+              defer.reject('change-password');
+            }
+          }
+        });
+      }, function() {
+        $timeout(function() { // See: http://stackoverflow.com/q/24945731/247243
+          defer.reject('login');
+        }, 250);
+      });
+
+      return defer.promise;
     }
   };
 
@@ -47,8 +68,8 @@ angular.module('MyApp', [
       views: {
         menuContent: {
           templateUrl: 'dashboard/dashboard.html',
-          controller: 'DashboardCtrl'//,
-          //resolve: resolve // What's wrong with this??
+          controller: 'DashboardCtrl',
+          resolve: resolve
         }
       }
     });
@@ -68,8 +89,8 @@ angular.module('MyApp', [
       StatusBar.styleDefault();
     }
 
-    $rootScope.$on('$stateChangeError', function() {
-      $state.go('login');
+    $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
+      $state.go(error);
     });
   });
 })
