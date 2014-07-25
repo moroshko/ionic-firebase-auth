@@ -89,7 +89,8 @@ angular.module('MyApp', [
       StatusBar.styleDefault();
     }
 
-    $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
+    $rootScope.$on('$stateChangeError', function(event, toState, toParams, 
+                                                 fromState, fromParams, error) {
       $state.go(error);
     });
   });
