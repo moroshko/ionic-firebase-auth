@@ -18,9 +18,8 @@ angular.module('MyApp.services').service('User',
     };
 
     this.create = function(id, email) {
-      var users = $firebase(usersRef);
-
-      return users.$child(id).$set({ email: email });
+      var users = $firebase(usersRef).$asArray();
+      return users.$add({id: id, email: email})
     };
 
     this.recordPasswordChange = function() {
